@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="my-5">Prueba Pipes</h1>
+            <table class="table">
+                <thead class="thead-dark">
+                    <th scope="col">Variables</th>
+                    <th scope="col">Pipes</th>
+                    <th scope="col">Resultado</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ nombre }}</td>
+                        <td>uppercase</td>
+                        <td>{{ nombre | uppercase }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ apellido }}</td>
+                        <td>lowercase</td>
+                        <td>{{ apellido | lowercase }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ nombre }}</td>
+                        <td>slice:2</td>
+                        <td>{{ nombre | slice:2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ numeros }}</td>
+                        <td>slice(Array)</td>
+                        <td>{{ numeros | slice:1:3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ decimal }}</td>
+                        <td>Decimal</td>
+                        <td>{{ decimal | number }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ decimal }}</td>
+                        <td>number:'1.0-2'</td>
+                        <td>{{ decimal | number:'1.0-2' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ porcentaje }}</td>
+                        <td>percent</td>
+                        <td>{{ porcentaje | percent }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ porcentaje }}</td>
+                        <td>percent:'1.0-1'</td>
+                        <td>{{ porcentaje | percent:'1.0-1' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ dinero }}</td>
+                        <td>percent:'1.0-1'</td>
+                        <td>{{ dinero | currency:'PEN' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ fecha }}</td>
+                        <td>date</td>
+                        <td>{{ fecha | date }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ fecha }}</td>
+                        <td>date:'medium'</td>
+                        <td>{{ fecha | date:'medium' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ fecha }}</td>
+                        <td>date:'MMMM - dd'</td>
+                        <td>{{ fecha | date:'MMMM - dd' }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ejemplo }}</td>
+                        <td>palabra(personalizado)</td>
+                        <td>{{ ejemplo | palabra }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ jsonEjemplo }}</td>
+                        <td>jsonEjemplo</td>
+                        <td>
+                            <pre>
+                                {{ jsonEjemplo | json }}
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{ texto }}</td>
+                        <td>jsonEjemplo</td>
+                        <td>
+                            <input type="submit" value="Mostrar/ocultar" (click)="visible = !visible">
+                        </td>
+                        <td>{{ texto | mostrar:visible }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
